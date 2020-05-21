@@ -1,0 +1,9 @@
+# Logs
+logs
+
+# certs
+*.pem
+
+
+# MacOS files
+.DS_Store
