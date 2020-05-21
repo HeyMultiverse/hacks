@@ -10,29 +10,36 @@ Prerequisites
 * nodejs
 * safari tech preview browser
 
+Steps
+-------------
 
 1) Add the hosts to your /etc/hosts
 
-127.0.0.1 search.example
-127.0.0.1 shop.example
-127.0.0.1 iframe.example
+  ```
+  127.0.0.1 search.example
+  127.0.0.1 shop.example
+  127.0.0.1 iframe.example
+  ```
 
 2) Generate the certs to enable https for the sites( from [siyenger's](https://github.com/siyengar/attribution) page)
 
-* First generate certificates for your server in this repo directory
+  * First generate certificates for your server in this repo directory
 
-`openssl req -x509 -nodes -days 30 -newkey rsa:2048 -keyout key.pem -out certificate.pem -config req.conf -extensions 'v3_req'`
+  `openssl req -x509 -nodes -days 30 -newkey rsa:2048 -keyout key.pem -out certificate.pem -config req.conf -extensions 'v3_req'`
 
-* Add certificate.pem to your keychain and double click to trust it
+  * Add certificate.pem to your keychain and double click to trust it
 
-For example like in https://tosbourn.com/getting-os-x-to-trust-self-signed-ssl-certificates/
+  For example like in https://tosbourn.com/getting-os-x-to-trust-self-signed-ssl-certificates/
 
 3) Start the servers(*.js) in each site - searchpublisher(ad), shop, and iframe.
 
 4) On your Safari Tech preview browser, visit https://search.example click on Ad Link to follow to shop page. Load the iframe in the page.
 
 
-Expected behavior. In your terminal, load the PPACA logs `$ log stream -info | grep AdClickAttribution`
+Expected
+-------------
+ 
+ In your terminal, load the PPACA logs `$ log stream -info | grep AdClickAttribution`
 
 ```
 2020-05-20 17:47:37.642357-0700 0x10266    Info        0x0                  8222   0    com.apple.WebKit.Networking: (WebKit) [com.apple.WebKit:AdClickAttribution] Storing an ad click.
