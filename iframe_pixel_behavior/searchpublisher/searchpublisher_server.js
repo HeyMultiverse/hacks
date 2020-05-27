@@ -18,12 +18,21 @@ https.createServer(options, function (request, response) {
 
     if(path == '/pixel') {
         console.log("In pixel Redirect");
-        // Simulating PPACA redirect for a pixel request.
-       response.writeHead(302, {
-        'Location': 'https://search.example:8080/.well-known/ad-click-attribution/25/26'
-        });
 
+        // Step 2. request
+        if(url.includes('PageView')) {
+            destination = 'https://search.example:8080/.well-known/ad-click-attribution/25/26';
+        }
+        else if(url.includes('Purchase')) {
+            destination = 'https://search.example:8080/.well-known/ad-click-attribution/25/27';
+        }
+
+        // Simulating PPACA redirect for a pixel request.
+        response.writeHead(302, {
+            'Location': destination
+            });
         response.end();
+    // Step 3. request
     } else if ( path.includes("/.well-known/ad-click-attribution")){
         console.log("In wellknown endpoint");
         // .well-known endpoint request.

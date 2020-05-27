@@ -42,9 +42,13 @@ Expected
  In your terminal, load the PPACA logs `$ log stream -info | grep AdClickAttribution`
 
 ```
-2020-05-20 17:47:37.642357-0700 0x10266    Info        0x0                  8222   0    com.apple.WebKit.Networking: (WebKit) [com.apple.WebKit:AdClickAttribution] Storing an ad click.
-2020-05-20 17:47:38.818537-0700 0x10266    Info        0x0                  8222   0    com.apple.WebKit.Networking: (WebKit) [com.apple.WebKit:AdClickAttribution] Got a conversion with conversion data: 25 and priority: 26.
-2020-05-20 17:47:38.818565-0700 0x10266    Info        0x0                  8222   0    com.apple.WebKit.Networking: (WebKit) [com.apple.WebKit:AdClickAttribution] Converted a stored ad click with conversion data: 25 and priority: 26.
-2020-05-20 17:47:38.818589-0700 0x10266    Info        0x0                  8222   0    com.apple.WebKit.Networking: (WebKit) [com.apple.WebKit:AdClickAttribution] Setting timer for firing conversion requests to the debug mode timeout of 60.000000 seconds where the regular timeout would have been 107767.809749 seconds.
-2020-05-20 17:48:38.821961-0700 0x10266    Info        0x0                  8222   0    com.apple.WebKit.Networking: (WebKit) [com.apple.WebKit:AdClickAttribution] About to fire an attribution request for a conversion.
+$ log stream -info | grep AdClickAttribution
+2020-05-21 14:46:40.451372-0700 0x10266    Info        0x0                  8222   0    com.apple.WebKit.Networking: (WebKit) [com.apple.WebKit:AdClickAttribution] Storing an ad click.
+2020-05-21 14:46:40.468323-0700 0x10266    Info        0x0                  8222   0    com.apple.WebKit.Networking: (WebKit) [com.apple.WebKit:AdClickAttribution] Got a conversion with conversion data: 25 and priority: 26.
+2020-05-21 14:46:40.468420-0700 0x10266    Info        0x0                  8222   0    com.apple.WebKit.Networking: (WebKit) [com.apple.WebKit:AdClickAttribution] Converted a stored ad click with conversion data: 25 and priority: 26.
+2020-05-21 14:46:40.468615-0700 0x10266    Info        0x0                  8222   0    com.apple.WebKit.Networking: (WebKit) [com.apple.WebKit:AdClickAttribution] Setting timer for firing conversion requests to the debug mode timeout of 60.000000 seconds where the regular timeout would have been 168380.398042 seconds.
+2020-05-21 14:46:44.466974-0700 0x10266    Info        0x0                  8222   0    com.apple.WebKit.Networking: (WebKit) [com.apple.WebKit:AdClickAttribution] Got a conversion with conversion data: 25 and priority: 27.
+2020-05-21 14:46:44.467002-0700 0x10266    Info        0x0                  8222   0    com.apple.WebKit.Networking: (WebKit) [com.apple.WebKit:AdClickAttribution] Re-converted an ad click with a new one with conversion data: 25 and priority: 27 because it had higher priority.
+
+2020-05-21 14:47:40.470869-0700 0x10266    Info        0x0                  8222   0    com.apple.WebKit.Networking: (WebKit) [com.apple.WebKit:AdClickAttribution] About to fire an attribution request for a conversion.
 ```
